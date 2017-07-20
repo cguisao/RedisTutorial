@@ -4,8 +4,8 @@ Author: Carlos Guisao
 
 1. Set up the web config file
   a. Add the following two lines of code in the <appSettings> xml tag
-    <add key="IsClusterEnabled" value="True" />
-    <add key="aspnet:UseHostHeaderForRequestUrl" value="True" />
+    `<add key="IsClusterEnabled" value="True" />
+    <add key="aspnet:UseHostHeaderForRequestUrl" value="True" /> `
   b. Replace the <sessionState> <Providers> <add name> to the following:
     <add name="PXSessionStateStore" type="PX.Data.PXSessionStateStore, PX.Data" ignoreUrl="/Frames/Menu.aspx,/Frames/GetFile.ashx" internalProviderType="Harbour.RedisSessionStateStore.RedisSessionStateStoreProvider" internalProviderConfig="host=127.0.0.1:6379; clientType=pooled;" internalProviderName="Local" serializeItems="true" />
 2. Download Redis and save them in the 
